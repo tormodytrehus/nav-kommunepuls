@@ -1,0 +1,16 @@
+{
+  "municipalities": {
+    "5022": "Rennebu",
+    "5029": "Skaun",
+    "5055": "Heim",
+    "5059": "Orkland",
+    "5061": "Rindal"
+  },
+  "source_page": "https://www.nav.no/no/nav-og-samfunn/statistikk/arbeidssokere-og-stillinger-statistikk/Annen%20Statistikk%20om%20arbeidsmarkedet",
+  "silent_first_run": true,
+  "max_feed_items": 24,
+  "feed": {
+    "title": "NAV-kommunepuls – Avisa Sør-Trøndelag",
+    "description": "Månedlige NAV-tall for Orkland, Skaun, Heim, Rennebu og Rindal."
+  }
+}

@@ -1,0 +1,49 @@
+# Identisk kopi av .github/workflows/nav.yml.
+# Bruk denne hvis operativsystemet skjuler .github-mappen ved opplasting.
+name: Overvåk NAV-kommunetall
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 8 * * 1-5"
+      timezone: "Europe/Oslo"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nav-kommune-monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Installer avhengigheter
+        run: pip install -r requirements.txt
+
+      - name: Hent NAV-tall og bygg RSS
+        run: |
+          python -m unittest discover -s tests -v
+          python monitor.py
+
+      - name: Lagre ny tilstand og RSS
+        run: |
+          git add state/nav.json public/feed.xml
+          if git diff --cached --quiet; then
+            echo "Ingen endringer"
+            exit 0
+          fi
+          git config user.name "nav-monitor[bot]"
+          git config user.email "nav-monitor[bot]@users.noreply.github.com"
+          git commit -m "Oppdater NAV-kommunetall"
+          git push
