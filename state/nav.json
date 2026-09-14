@@ -1,8 +1,64 @@
 {
   "version": 1,
-  "initialized": false,
-  "latest_period": null,
-  "latest_source_url": null,
-  "latest_values": {},
+  "initialized": true,
+  "latest_period": "2026-08",
+  "latest_source_url": "https://www.nav.no/_/attachment/download/75c5ad06-ef1a-471f-a808-b384e79ae6bb:288a6ee14c06a4e206af9caf4192194fd2d5b97f/202608_A400%20Arbeidssokere%20og%20ledige%20stillinger.%20Kommune%20og%20kjennetegn.%20Maaned.xlsx",
+  "latest_values": {
+    "5022": {
+      "name": "Rennebu",
+      "total_jobseekers": 37,
+      "fully_unemployed": 23,
+      "partly_unemployed": 12,
+      "labour_market_measures": "*",
+      "fully_unemployed_pct": 1.9,
+      "partly_unemployed_pct": 1,
+      "measures_pct": "*",
+      "new_vacancies": 1
+    },
+    "5029": {
+      "name": "Skaun",
+      "total_jobseekers": 104,
+      "fully_unemployed": 63,
+      "partly_unemployed": 30,
+      "labour_market_measures": 11,
+      "fully_unemployed_pct": "*",
+      "partly_unemployed_pct": "*",
+      "measures_pct": "*",
+      "new_vacancies": 17
+    },
+    "5055": {
+      "name": "Heim",
+      "total_jobseekers": 109,
+      "fully_unemployed": 67,
+      "partly_unemployed": 25,
+      "labour_market_measures": 17,
+      "fully_unemployed_pct": 2.3,
+      "partly_unemployed_pct": 0.8,
+      "measures_pct": 0.6,
+      "new_vacancies": 23
+    },
+    "5059": {
+      "name": "Orkland",
+      "total_jobseekers": 279,
+      "fully_unemployed": 164,
+      "partly_unemployed": 69,
+      "labour_market_measures": 46,
+      "fully_unemployed_pct": 1.7,
+      "partly_unemployed_pct": 0.7,
+      "measures_pct": 0.5,
+      "new_vacancies": 69
+    },
+    "5061": {
+      "name": "Rindal",
+      "total_jobseekers": 18,
+      "fully_unemployed": 9,
+      "partly_unemployed": 7,
+      "labour_market_measures": "*",
+      "fully_unemployed_pct": "*",
+      "partly_unemployed_pct": "*",
+      "measures_pct": "*",
+      "new_vacancies": 2
+    }
+  },
   "events": []
 }
